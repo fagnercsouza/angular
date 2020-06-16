@@ -1,0 +1,21 @@
+trabalhar com Angular
+
+instalar Node.js (necessário chocolatey instalado)
+instalar Chocolatey 
+	-Corra Get-ExecutionPolicy. Se retornar Restricted, execute Set-ExecutionPolicy AllSignedou Set-ExecutionPolicy Bypass -Scope Process.
+	- Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = 	[System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+cinst nodejs
+instalar Typescript
+npm install -g typescript
+instalar Angular Cli
+npm install -g @angular/cli
+
+*/**/*/*/*/
+Iniciar novo projeto
+
+ng new "nome do projeto"
+
+/**/*/*/
+Instalar Bootstrap
+npm install bootstrap
+npm install ngx-bootstrap --save
