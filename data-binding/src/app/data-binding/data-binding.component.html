@@ -13,7 +13,7 @@
         <img bind-src="urlImage">
 
     </article> -->
-    <article>
+    <!-- <article>
         <h3>Class e Style Bindign </h3>
         <div>
             Selecione uma classe:
@@ -46,6 +46,31 @@
             [style.display]="classe.value =='alert-danger' ? 'block' : 'none' ">
             Deu erro
         </div>
+        </div>
+    </article> -->
+    <article>
+        <h3>Event Binding</h3>
+        <div>
+            <button (click)="botaoClicado()"
+                class="btn btn-primary">Me clique</button>
+            <br><br>
+            <input type="text"
+                (keyup)="onKeyUP($event)"
+                (keyup.enter)="salvarValor($event.target.value)"
+                (blur)="salvarValor(campoInput.value)" 
+                
+                #campoInput />
+                <!-- blur: quando o elemento perde o foco -->
+
+            <p>Valor atual: {{valorAtual}}</p>
+            <p>Valor atual: {{valorSalvo}}</p>
+            <br><br>
+            <span 
+                (mouseover)="onMouseOverOut()"
+                (mouseout)="onMouseOverOut()"
+                [class.highligth]="isMouseOver">
+                Passe o mouse
+            </span>
         </div>
     </article>
 </section>
