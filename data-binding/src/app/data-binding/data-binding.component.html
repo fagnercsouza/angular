@@ -48,7 +48,7 @@
         </div>
         </div>
     </article> -->
-    <article>
+    <!-- <article>
         <h3>Event Binding</h3>
         <div>
             <button (click)="botaoClicado()"
@@ -58,10 +58,8 @@
                 (keyup)="onKeyUP($event)"
                 (keyup.enter)="salvarValor($event.target.value)"
                 (blur)="salvarValor(campoInput.value)" 
-                
                 #campoInput />
-                <!-- blur: quando o elemento perde o foco -->
-
+                
             <p>Valor atual: {{valorAtual}}</p>
             <p>Valor atual: {{valorSalvo}}</p>
             <br><br>
@@ -72,5 +70,42 @@
                 Passe o mouse
             </span>
         </div>
+    </article> -->
+    
+</section>
+<!-- Estudar mais sobre Two-wey, pois não funcionou-->
+<!-- <section class="two-wey-bindin">
+    <article>
+        <h3>Two-Wey data bindgin</h3>
+        <div>
+            <input type="text"
+                [value]="nome"
+                (input)="nome = $event.target.value"
+            />
+            <input type="text"
+            [ngModel]="nome"
+            (ngModelChange)="nome = $event"
+            />
+            <input type="text"
+                [(ngModel)]="nome"
+            />
+            <p>Você digitou o nome: {{ nome }} </p>
+        </div>
+        <div>
+            <input type="text" [(ngModel)]="pessoa.nome" >
+            <input type="text" [(ngModel)]="pessoa.idade" >
+            <p>Nome: {{pessoa.nome}} </p>
+        </div>
     </article>
+</section> -->
+<section class="input-output-properties"> 
+    <article>
+        <h3>Input/Output Properties</h3>
+
+        <app-curso [nome]="nomeCurso"></app-curso>
+        
+        <contador [valor]="valorInicial"
+        (mudouValor)="onMudouValor($event)"
+        ></contador>
+    </article>    
 </section>
