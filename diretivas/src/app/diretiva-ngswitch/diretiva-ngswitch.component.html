@@ -1,0 +1,22 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link " 
+        [class.active]="aba == 'home'"
+        (click)="aba = 'home'">Home <span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link"
+      [class.active]="aba == 'mapa'"
+      (click)="aba = 'mapa'" >Mapa</a>
+      <a class="nav-item nav-link"
+      [class.active]="aba == 'lista'"
+      (click)="aba = 'lista'"  >Lista</a>
+    </div>
+  </div>
+</nav>
+
+<div class="container" [ngSwitch]="aba">
+  <p *ngSwitchCase=" 'mapa'"> Modo mapa ativado</p>
+  <p *ngSwitchCase=" 'lista'"> Modo lista ativado</p>
+  <p *ngSwitchDefault=""> Home</p>
+
+</div>

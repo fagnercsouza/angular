@@ -1,0 +1,15 @@
+<h3>ngFor</h3>
+
+<div>
+    <ul>
+        <li *ngFor="let curso of cursos, let i = index">
+            {{ i }} {{ curso }}
+        </li>
+    </ul>
+    <ul>
+        <li *ngFor="let curso of cursos, let i = index">
+            {{ i + 1 }} {{ curso }}
+        </li>
+    </ul>
+
+</div>
