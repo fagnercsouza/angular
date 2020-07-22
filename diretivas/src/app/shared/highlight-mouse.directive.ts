@@ -1,9 +1,9 @@
 import { Directive, HostListener, Renderer2, ElementRef, HostBinding } from '@angular/core';
 
 @Directive({
-  selector: '[hignlightMouse]'
+  selector: '[highlightMouse]'
 })
-export class HignlightMouseDirective {
+export class HighlightMouseDirective {
 
   @HostListener('mouseenter') onMouseOver(){
     // this._renderer.setStyle(

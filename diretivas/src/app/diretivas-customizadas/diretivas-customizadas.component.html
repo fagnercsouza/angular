@@ -1,4 +1,23 @@
 <h1>Diretivas Customizadas</h1>
 <p fundoAmarelo>Texto com fundo amarelo</p>
 
-<p hignlightMouse>Texto com highlight quando passo o mouse</p>
+<p highlightMouse>Texto com highlight quando passo o mouse</p>
+
+<p highlight [defaultColor]="'grey'" [highlightColor]="'blue'">
+    Texto com highlight quando passo o mouse
+</p>
+<h5>Diretivas curstomizada - ngElse</h5>
+<div *ngIf="mostrarCurso">
+    Lista de cursos aqui
+</div>
+<div *ngElse="mostrarCurso">
+    Não existe cursos aqui
+</div>
+<br>
+<button (click)="onMostrarCurso()">Mostrar/Esconder Curso</button>
+<!-- <template [ngElse]="mostrarCurso">
+    <div>
+    Não existe cursos aqui
+    </div>
+</template> -->
+    
