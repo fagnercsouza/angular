@@ -1,0 +1,24 @@
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-exemplo-pipes',
+  templateUrl: './exemplo-pipes.component.html',
+  styleUrls: ['./exemplo-pipes.component.css']
+})
+export class ExemploPipesComponent implements OnInit {
+
+  livro: any = {
+    titulo: 'Aprendendo Javascript com estrutura de dados',
+    rating: 4.54321,
+    numeroPaginas: 341,
+    preco: 44.99,
+    dataLancamento: new Date(2016, 5, 23),
+    url: 'http://a.co/glqjpRP'
+   }
+  
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+
+}
