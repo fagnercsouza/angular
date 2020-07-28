@@ -1,10 +1,22 @@
-<h5>Exempo de pipes</h5>
+<h5>Exempo de pipes - Formatação</h5>
 
-<p>Título:  {{livro.titulo | uppercase | lowercase}}</p>
+<p>Título:  {{livro.titulo | uppercase | lowercase | camelCase}}</p>
 <p>Estrelas:  {{livro.rating | number: '1.1-1'}}</p>
 <p>Páginas:  {{livro.numeroPaginas | number}}</p>
 <p>Preço:  {{livro.preco | currency:'BRL' }}</p>
-<p>Data lançamento:  {{livro.dataLancamento | date:'dd/MMM/yyyy'  }}</p>
+<p>Data lançamento:  {{livro.dataLancamento | date  }}</p>
 <p>Url:  {{livro.url }}</p>
 <br>
 <p>Livro:  {{livro | json  }}</p>
+<br>
+
+<input type="text" [(ngModel)]="filtro">
+<br>
+
+<input type="text" #novoValor>
+<button (click)="addLivro(novoValor.value)" >Add Livro</button>
+<ul>
+    <li *ngFor="let liv of livros | filtroArray:filtro">
+        {{liv}}
+    </li>
+</ul>
