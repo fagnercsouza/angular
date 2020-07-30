@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs'
 
 @Component({
   selector: 'app-exemplo-pipes',
@@ -24,6 +25,28 @@ export class ExemploPipesComponent implements OnInit {
     this.livros.push(valor);
     console.log(this.livros)
   }
+  /**Realizando filtro utilizado método - esta e forma correta de fazer filtro */
+  obterLivros(){
+
+    if (this.livros.length === 0 || this.filtro === undefined ||
+      this.filtro.trim() === ''){
+      return this.livros;
+    }
+    
+    return this.livros.filter((v) => {
+      if (v.toLowerCase().indexOf(this.filtro.toLowerCase()) >= 0){
+          return true;
+      }
+      return false;
+    });
+  }  
+
+  valorAsync = new Promise((resolve, reject) =>{
+    setTimeout(() => resolve('Valor assíncrono'), 2000);
+  })
+
+  // valorAsync2 = Observable.interval(2000).map(valor => 'Valor assíncrono Observable');
+
   constructor() { }
 
   ngOnInit(): void {

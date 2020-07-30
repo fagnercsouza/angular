@@ -10,6 +10,7 @@ export class FiltroArrayPipe implements PipeTransform {
     if (value.length === 0 || args === undefined){
       return value;
     }
+    
     let filter = args.toLocaleString();
     return value.filter(
       v => v.toLocaleLowerCase().indexOf(filter) != -1
